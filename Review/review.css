@@ -1,0 +1,271 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    /* The image used */
+  background-color: black;
+  width: 100%;
+  min-height: 870px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Needed to position the navbar */
+  position: relative;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 5rem;
+    border: 1px solid rgb(48, 42, 42);
+}
+
+.brand-title{
+    font-size: 1.5rem;
+    margin: .3rem;
+}
+.brand-title img{
+    width: 45px;
+    border: 2px solid rgb(236, 144, 58);
+    border-radius:  5px;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+.navbar-links li a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+
+
+}
+.navbar-links li:hover {
+    background-color: rgb(236, 144, 58);
+    border-radius: 9px;;
+    
+}
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius:  10px;
+}
+/*---------------------------body------------*/
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  background-color: #010a11;
+  padding: 1px;
+}
+.grid-item {
+  color: white;
+  border: 1px solid rgba(80, 73, 73, 0.8);
+  padding: 1rem;
+  font-size: 14px;
+
+}
+.grid-item img{
+    width: 25%;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+.grid-item1 h1{
+    text-align: center ;
+    padding: 104px;
+    color: rgb(189, 172, 128);
+    font-size: 3rem;
+}
+/*------------------------body ends here----*/
+/*--------@media-body start- here -------*/
+@media (max-width: 590px){
+    .grid-container {
+  display: block;
+  margin: 0;
+  background-color: black;
+  
+}
+.grid-item {
+  
+  border: 1px solid rgb(36, 33, 33);
+  padding: 50px;
+  font-size: 14px;
+  text-align: left;
+  color: white;
+  font-family: barlow;
+}
+  .grid-item1 h1{
+      text-align: center;
+      padding: 95px;
+      color: rgb(230, 202, 170);
+      font-size: 3rem;
+      
+
+  } 
+  .question_actions{
+      color: red;
+      font-size: 32px;
+  } 
+
+}
+
+/*--------------------@media-----body ends hear------*/
+/*-------------------footer start here-------*/
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.footer{
+    width: 100vw;
+    display: block;
+    overflow: hidden;
+    padding: 70px 0;
+    box-sizing: border-box;
+    background-color: #18181a;
+    margin-top: 0rem;
+
+}
+.inner_footer{
+    display: block;
+    margin: 0 auto;
+    width: 1100px;
+    height: 100%;
+}
+.inner_footer .logo_container{
+    width: 35%;
+    float: left;
+    height: 100%;
+    display: block;
+
+}
+.inner_footer .logo_container img{
+ width: 60px;
+
+}
+.inner_footer .footer_third{
+    width:  calc(21.66666667%-20px);
+    margin-right: 10px;
+    float: left;
+    height:  100%;
+}
+.inner_footer .footer_third:last-child{
+    margin-right: 0;
+}
+.inner_footer .footer_third h1{
+    font-family: 'aria';
+    font-size: 22px;
+    color: white;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+.inner_footer .footer_third a{
+    font-family: 'aria';
+    font-size: 18px;
+    color: white;
+    display: block;
+    font-weight: 200;
+    width: 100%;
+    padding-bottom: 5px;
+}
+.inner_footer .footer_third li{
+    display: inline-block;
+    padding:  0;
+    font-size: 20px;
+}
+.inner_footer .footer_third span{
+    color: white;
+    font-family: 'aria';
+    font-size: 16px;
+    font-weight: 200;
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+}
+
+@media(max-width: 600px){
+    .footer .inner_footer{
+        width: 90%;
+    }
+    .inner_footer .logo_container,
+    .inner_footer .footer_third{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+/*-------------------footer-ends here--------*/
+
+
+@media (max-width: 500px){
+    .toggle-button {
+        display: flex;
+        
+    }
+    
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction:  column;
+        align-items: flex-start;
+    }
+    .navbar img{
+        margin-left: 0rem;
+    }
+    
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    
+        
+    }
+
+    .navbar-links li {
+        text-align: center;
+        
+        
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
